@@ -43,7 +43,7 @@ export default function AddPage() {
         />
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email@gmail.com"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           required

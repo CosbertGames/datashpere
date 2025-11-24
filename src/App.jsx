@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-do
 import AddPage from './pages/AddPage'
 import ViewPage from './pages/ViewPage'
 import EditPage from './pages/EditPage'
+import UserDetailPage from './pages/UserDetailPage'
 
 export default function App() {
   return (
@@ -15,7 +16,7 @@ export default function App() {
             className={({ isActive }) => (isActive ? 'active' : '')}
             end
           >
-            Add/Create
+            Add New User
           </NavLink>
           <NavLink
             to="/view"
@@ -24,6 +25,7 @@ export default function App() {
           >
             View
           </NavLink>
+          <h3 className='logo'>DATASPHERE</h3>
         </nav>
 
         {/* Routes */}
@@ -32,6 +34,7 @@ export default function App() {
           <Route path="/add" element={<AddPage />} />
           <Route path="/view" element={<ViewPage />} />
           <Route path="/edit/:id" element={<EditPage />} />
+          <Route path="/user/:id" element={<UserDetailPage />} />
           <Route path="*" element={<Navigate to="/view" replace />} />
         </Routes>
       </div>
